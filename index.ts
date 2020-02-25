@@ -8,11 +8,11 @@ const getData = (param) => {
 }
 
 // using a regular map
-from([1,2,3,4]).pipe(
+from(['rivet','tapas','valsad','angular']).pipe(
   map(param => getData(param))
 ).subscribe(val => val.subscribe(data => console.log(data)));
 
 // using mergeMap
-from([1,2,3,4]).pipe(
+from(['rivet','tapas','valsad','angular']).pipe(
   mergeMap(param => getData(param))
 ).subscribe(val => console.log(val));
